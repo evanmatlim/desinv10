@@ -1,0 +1,363 @@
+:root {
+    --lightShade: #FBF5DE;
+    --lightAccent: #A89478;
+    --mainBrand: #CE9E76;
+    --darkAccent: #A57061;
+    --darkShade: #424070;
+    --shadow: #282828;
+}
+
+/* ---- STRUCTURE ---------------------------------------------- */
+
+#design-container {
+    width: 100%;
+    min-width: 900px;
+    height: 100%;
+    min-height: 700px;
+    /* background: var(--darkShade); */
+    background-color: var(--lightShade);
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.design-navbar {
+    width: 620px;
+    height: 30px;
+    margin-top: 45px;
+    box-shadow: 0px 0px 2px 1px var(--darkAccent);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+}
+
+.design-navbar-button {
+    width: calc(100% / 3);
+    height: 100%;
+    /* background-color: red; */
+    font-family: 'Raleway';
+    color: var(--lightAccent);
+    transition-duration: 240ms;
+}
+
+.design-navbar-button.active, .design-navbar-button:hover {
+    background-color: var(--darkAccent);
+    color: var(--lightShade);
+}
+
+.design-content-container {
+    width: 900px;
+    height: 580px;
+    /* min-height: 470px;
+    max-height: 520px; */
+    margin-top: 45px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#design-content {
+    width: 88%;
+    height: 100%;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+.arrow-container {
+    width: 6%;
+    height: 10%;
+    transition-duration: 140ms;
+}
+
+.arrow {
+    color: var(--lightAccent);
+    font-size: xx-large;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow.on {
+    display: flex;
+}
+
+.arrow:hover {
+    color: var(--darkShade);
+    cursor: pointer;
+}
+
+.design-content-section-container {
+    width: 300%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+}
+
+.design-content-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: black; */
+}
+
+/* #ideation-container {
+    background-color: var(--darkAccent);
+}
+
+#prototyping-container {
+    background-color: var(--darkShade);
+}
+
+#implementation-container {
+    background-color: var(--mainBrand);
+} */
+
+
+/* ---- DESIGN COMPONENTS --------------------------------- */
+
+
+.column {
+    width: 50%;
+    height: 100%;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.design-component {
+    /* width: 100%; */
+
+    width: 90%;
+    height: 30%;
+    /* background-color: var(--darkShade); */
+    overflow: hidden;
+    box-shadow: 0px 2px 4px 0px var(--shadow);
+    position: relative;
+    border-radius: 6px;
+    transition-duration: 200ms;
+}
+
+.design-component:hover {
+    box-shadow: 0px 4px 6px 0px var(--shadow);
+}
+
+.design-overlay {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: var(--shadow);
+    transition-duration: 200ms;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.design-overlay:hover {
+    opacity: 0.1;
+}
+
+.design-component-title {
+    width: 88%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-family: "Inika";
+    font-size: 15pt;
+    font-weight: bold;
+    color: var(--darkShade);
+}
+
+#team-collaboration {
+    height: 20%;
+}
+
+#matrix {
+    height: 52%;
+}
+
+#importance {
+    height: 34%;
+}
+
+
+#moodboard {
+    height: 35%;
+}
+
+#concept {
+    height: 81%;
+}
+
+#sketch {
+    height: 28%;
+}
+
+#storyboard {
+    height: 42%;
+}
+
+#cad {
+    height: 15%;
+}
+
+#poster {
+    height: 57%;
+}
+
+#rationale {
+    height: 36%;
+}
+
+#presentation {
+    height: 34%;
+}
+
+.design-preview {
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* ---- DESIGN OVERLAY ------------------------------------ */
+
+.overlay-picture-container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 4;
+}
+
+.overlay-picture-container:hover {
+    cursor: pointer;
+}
+
+.overlay-picture {
+    box-shadow: 0px 4px 10px 0px var(--shadow);
+    /* z-index: 5; */
+    z-index: 500;
+}
+
+.overlay-picture:hover {
+    cursor: default;
+}
+
+
+#clickable-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+}
+
+#team-collaboration-expanded {
+    width: 74%;
+    min-width: 860px;
+    max-width: 1060px;
+    height: auto;
+}
+
+#matrix-expanded {
+    height: 90%;
+}
+
+#importance-expanded {
+    width: 74%;
+    min-width: 860px;
+    max-width: 1060px;
+    height: auto;
+}
+
+#moodboard-expanded {
+    width: 74%;
+    min-width: 860px;
+    max-width: 1060px;
+    height: auto;
+}
+
+#concept-expanded {
+    height: 90%;
+}
+
+#sketch-expanded {
+    width: 74%;
+    min-width: 860px;
+    max-width: 1060px;
+    height: auto;
+}
+
+#storyboard-expanded {
+    width: 74%;
+    min-width: 860px;
+    max-width: 1060px;
+    height: auto;
+}
+
+#rationale-expanded {
+    height: 90%;
+}
+
+#poster-expanded {
+    height: 90%;
+}
+
+#cad-expanded {
+    width: 74%;
+    min-width: 860px;
+    max-width: 1060px;
+    height: auto;
+}
+
+
+
+/* #final-matrix {
+    height: 50%;
+    background-color: var(--darkShade);
+}
+
+#storyboard {
+    height: 17%;
+    background-color: var(--darkShade);
+}
+
+#importance-matrix {
+    height: 40%;
+    background-color: var(--darkShade);
+}
+
+#concept-poster {
+    height: 56%;
+    background-color: var(--darkShade);
+}
+
+#product-sketches {
+    height: 46%;
+    background-color: var(--darkShade);
+}
+
+#moodboard {
+    height: 18%;
+    background-color: var(--darkShade);
+}
+
+#logo-rationale {
+    height: 28%;
+    background-color: var(--darkShade);
+} */
